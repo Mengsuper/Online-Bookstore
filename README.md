@@ -7,7 +7,7 @@
 - Node.js
 - Mongodb 
 
-## Running Locally
+### Running Locally
 
 Make sure you have [Node.js](http://nodejs.org/) and the [Mongodb](https://www.mongodb.com) installed.
 You can initialize the database with single command load("initdb.js") in mongodb shell. 
