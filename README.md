@@ -1,4 +1,4 @@
-# CPEN400 Backend Server
+# Backend Server
 
 A barebones Node.js app using [Express 4](http://expressjs.com/).
 
@@ -24,8 +24,3 @@ For more information about using Node.js on Heroku, see these Dev Center article
 - [Heroku Node.js Support](https://devcenter.heroku.com/articles/nodejs-support)
 - [Node.js on Heroku](https://devcenter.heroku.com/categories/nodejs)
 - [Using WebSockets on Heroku with Node.js](https://devcenter.heroku.com/articles/node-websockets)
-
-
-#### Reference
-
-Forked from https://github.com/erkartik91/cpen400.git
