@@ -2,7 +2,7 @@
 ## Online Bookstore 
 
 
-#### Prerequisites
+### Prerequisites
 
 - Node.js
 - Mongodb 
