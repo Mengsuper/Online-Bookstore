@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>UBC CPEN400A - Assignment 1</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="http://ece.ubc.ca/~kbajaj/cpen400a/jquery.js" type="text/javascript"></script>
+	<script src="http://ece.ubc.ca/~kumseok/src/cpen400a/test4.js" type="text/javascript"></script>
+	<script src="shoppingcart.js"></script>
+</head>
+
+<body>
+	<div id="header">
+		<div>
+			<img id="logo" src="images/ubcLogo.gif"/>
+		</div>
+		<div>
+			<img id="welcomeBanner" src="images/welcomeImage.png"/>
+			<button id="shopcart" value="shopcart"><img src="images/cart.png"/>Cart($0)</button>
+		</div>
+	</div>
+
+	<div id="myModal" class="modal">
+		<!-- Modal content -->
+  		<div class="modal-content">
+    		<span class="close">&times;</span>
+    		<div id="tableID">
+    			<p id="pid">Products in your carts: </p>
+    			<table id="tableid">
+  					<tr>
+    					<th>Items</th>
+    					<th>Quantity</th> 
+    					<th>Add</th>
+    					<th>Remove</th>
+  					</tr>
+  					<tr>
+					    <td></td>
+					    <td></td> 
+					    <td><button class="addBtn">+</button></td>
+					    <td><button class="rmvBtn">-</button></td>
+					</tr>
+					<tr>
+					    <td></td>
+					    <td></td> 
+					    <td><button class="addBtn">+</button></td>
+					    <td><button class="rmvBtn">-</button></td>
+  					</tr>
+  					<tr>
+					    <td></td>
+					    <td></td> 
+					    <td><button class="addBtn">+</button></td>
+					    <td><button class="rmvBtn">-</button></td>
+  					</tr>
+  					<tr>
+					    <td></td>
+					    <td></td> 
+					    <td><button class="addBtn">+</button></td>
+					    <td><button class="rmvBtn">-</button></td>
+  					</tr>
+  					<tr>
+					    <td></td>
+					    <td></td> 
+					    <td><button class="addBtn">+</button></td>
+					    <td><button class="rmvBtn">-</button></td>
+  					</tr>
+  					<tr>
+					    <td></td>
+					    <td></td> 
+					    <td><button class="addBtn">+</button></td>
+					    <td><button class="rmvBtn">-</button></td>
+  					</tr>
+  					<tr>
+					    <td></td>
+					    <td></td> 
+					    <td><button class="addBtn">+</button></td>
+					    <td><button class="rmvBtn">-</button></td>
+					</tr>
+					<tr>
+					    <td></td>
+					    <td></td> 
+					    <td><button class="addBtn">+</button></td>
+					    <td><button class="rmvBtn">-</button></td>
+  					</tr>
+  					<tr>
+					    <td></td>
+					    <td></td> 
+					    <td><button class="addBtn">+</button></td>
+					    <td><button class="rmvBtn">-</button></td>
+  					</tr>
+  					<tr>
+					    <td></td>
+					    <td></td> 
+					    <td><button class="addBtn">+</button></td>
+					    <td><button class="rmvBtn">-</button></td>
+  					</tr>
+  					<tr>
+					    <td></td>
+					    <td></td> 
+					    <td><button class="addBtn">+</button></td>
+					    <td><button class="rmvBtn">-</button></td>
+  					</tr>
+  					<tr>
+					    <td></td>
+					    <td></td> 
+					    <td><button class="addBtn">+</button></td>
+					    <td><button class="rmvBtn">-</button></td>
+  					</tr>
+				</table>
+				<p id="totalPrice">Total Price: $0</p>
+				<button id="checkout">Checkout</button>
+    		</div>
+  		</div>
+	</div>
+	
+
+	<div id="mainContent">
+		<div>
+			<ul id="navigationMenu">
+				<li>All Items</li>
+				<li>Books</li>
+				<li>Clothing</li>
+				<li>Tech</li>
+				<li>Gifts</li>
+				<li>Stationery</li>
+				<li>Supplies</li>
+			</ul>
+		</div>
+		<div>
+			<ul id="productList">
+				<li class="product">
+					<div>
+						<div>
+							<img src="images/products/Box1_$10.png"/>
+							<span><img src="images/cart.png"/>$ 10.00<br/>
+								<button class="addItem" name="addItem" value="Box1">Add</button>
+								<button class="removeItem" name="removeItem" value="Box1">Remove</button>
+							</span>
+						</div>
+						<div>
+							Box 1
+						</div>
+					</div>
+				</li>
+				<li class="product">
+					<div>
+						<div>
+							<img src="images/products/Box2_$5.png"/>
+							<span><img src="images/cart.png"/>$ 5.00<br/>
+								<button class="addItem" name="addItem" value="Box2">Add</button>
+								<button class="removeItem" name="removeItem" value="Box2">Remove</button>
+							</span>
+						</div>
+						<div>
+							Box 2
+						</div>
+					</div>
+				</li>
+				<li class="product">
+					<div>
+						<div>
+							<img src="images/products/Clothes1_$20.png"/>
+							<span><img src="images/cart.png"/>$ 20.00<br/>
+								<button class="addItem" name="addItem" value="Clothes1">Add</button>
+								<button class="removeItem" name="removeItem" value="Clothes1">Remove</button>
+							</span>
+						</div>
+						<div>
+							Clothes 1
+						</div>
+					</div>
+				</li>
+				<li class="product">
+					<div>
+						<div>
+							<img src="images/products/Clothes2_$30.png"/>
+							<span><img src="images/cart.png"/>$ 30.00<br/>
+								<button class="addItem" name="addItem" value="Clothes2">Add</button>
+								<button class="removeItem" name="removeItem" value="Clothes2">Remove</button>
+							</span>
+						</div>
+						<div>
+							Clothes 2
+						</div>
+					</div>
+				</li>
+				<li class="product">
+					<div>
+						<div>
+							<img src="images/products/Jeans_$50.png"/>
+							<span><img src="images/cart.png"/>$ 50.00<br/>
+								<button class="addItem" name="addItem" value="Jeans">Add</button>
+								<button class="removeItem" name="removeItem" value="Jeans">Remove</button>
+							</span>
+						</div>
+						<div>
+							Jeans
+						</div>
+					</div>
+				</li>
+				<li class="product">
+					<div>
+						<div>
+							<img src="images/products/Keyboard_$20.png"/>
+							<span><img src="images/cart.png"/>$ 20.00<br/>
+								<button class="addItem" name="addItem" value="Keyboard">Add</button>
+								<button class="removeItem" name="removeItem" value="Keyboard">Remove</button>
+							</span>
+						</div>
+						<div>
+							Keyboard
+						</div>
+					</div>
+				</li>
+				<li class="product">
+					<div>
+						<div>
+							<img src="images/products/KeyboardCombo_$40.png"/>
+							<span><img src="images/cart.png"/>$ 40.00<br/>
+								<button class="addItem" name="addItem" value="KeyboardCombo">Add</button>
+								<button class="removeItem" name="removeItem" value="KeyboardCombo">Remove</button>
+							</span>
+						</div>
+						<div>
+							Keyboard Combo
+						</div>
+					</div>
+				</li>
+				<li class="product">
+					<div>
+						<div>
+							<img src="images/products/Mice_$20.png"/>
+							<span><img src="images/cart.png"/>$ 20.00<br/>
+								<button class="addItem" name="addItem" value="Mice">Add</button>
+								<button class="removeItem" name="removeItem" value="Mice">Remove</button>
+							</span>
+						</div>
+						<div>
+							Mice
+						</div>
+					</div>
+				</li>
+				<li class="product">
+					<div>
+						<div>
+							<img src="images/products/PC1_$350.png"/>
+							<span><img src="images/cart.png"/>$ 350.00<br/>
+								<button class="addItem" name="addItem" value="PC1">Add</button>
+								<button class="removeItem" name="removeItem" value="PC1">Remove</button>
+							</span>
+						</div>
+						<div>
+							PC 1
+						</div>
+					</div>
+				</li>
+				<li class="product">
+					<div>
+						<div>
+							<img src="images/products/PC2_$400.png"/>
+							<span><img src="images/cart.png"/>$ 400.00<br/>
+								<button class="addItem" name="addItem" value="PC2">Add</button>
+								<button class="removeItem" name="removeItem" value="PC2">Remove</button>
+							</span>
+						</div>
+						<div>
+							PC 2
+						</div>
+					</div>
+				</li>
+				<li class="product">
+					<div>
+						<div>
+							<img src="images/products/PC3_$300.png"/>
+							<span><img src="images/cart.png"/>$ 300.00<br/>
+								<button class="addItem" name="addItem" value="PC3">Add</button>
+								<button class="removeItem" name="removeItem" value="PC3">Remove</button>
+							</span>
+						</div>
+						<div>
+							PC 3
+						</div>
+					</div>
+				</li>
+				<li class="product">
+					<div>
+						<div>
+							<img src="images/products/Tent_$100.png"/>
+							<span><img src="images/cart.png"/>$ 100.00<br/>
+								<button class="addItem" name="addItem" value="Tent">Add</button>
+								<button class="removeItem" name="removeItem" value="Tent">Remove</button>
+							</span>
+						</div>
+						<div>
+							Tent
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div id="footer">
+		<div>
+			<p>Dear customer, you have been inactive for <span id="timer">0</span> seconds.</p>
+			<p><b>Electrical and Computer Engineering</b></p>
+			<p>2332 Main Mall</p>
+			<p>Vancouver, BC, V6T 1Z4, Canada</p>
+			<p>Tel +1.604.822.2872</p>
+			<p>Fax +1.604.822.5949</p>
+			<p>Email info@ece.ubc.ca</p>
+		</div>
+	</div>
+</body>
+</html>
